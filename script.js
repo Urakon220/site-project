@@ -1,4 +1,4 @@
-           const products = [
+            const products = [
             { id: 1, title: "MacBook Pro 16\"", price: 89999, category: "tech", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=500&q=60" },
             { id: 2, title: "iPhone 15 Pro", price: 45999, category: "tech", img: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=500&q=60" },
             { id: 3, title: "Sony WH-1000XM5", price: 12999, category: "tech", img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=500&q=60" },
@@ -14,9 +14,6 @@
 
         let cart = [];
 
-        // --- FUNCTIONS ---
-
-        // Render Products
         function renderProducts(filter = 'all') {
             const container = document.getElementById('product-container');
             container.innerHTML = '';
@@ -78,10 +75,10 @@
         }
 
         function updateCartUI() {
-            // Count
+
             document.querySelector('.cart-count').innerText = cart.length;
             
-            // Render Items in Modal
+            
             const container = document.getElementById('cart-items-container');
             const totalEl = document.getElementById('cart-total');
             
@@ -120,7 +117,7 @@
             modal.classList.toggle('open');
         }
 
-        // Close modal if clicking outside
+
         document.getElementById('cart-modal').addEventListener('click', function(e) {
             if (e.target === this) {
                 toggleCart();
@@ -139,6 +136,5 @@
             toggleCart();
         }
 
-        // Init
+
         renderProducts();
-    </script>
