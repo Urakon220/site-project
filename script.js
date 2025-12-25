@@ -1,15 +1,15 @@
             const products = [
-            { id: 1, title: "MacBook Pro 16\"", price: 89999, category: "tech", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=500&q=60" },
+            { id: 1, title: "MacBook Pro 16\"", price: 89999, category: "tech", img: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=500&q=60" },
             { id: 2, title: "iPhone 15 Pro", price: 45999, category: "tech", img: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=500&q=60" },
             { id: 3, title: "Sony WH-1000XM5", price: 12999, category: "tech", img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=500&q=60" },
             { id: 4, title: "Чоловіча куртка зимова", price: 3499, category: "clothing", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=500&q=60" },
             { id: 5, title: "Жіноча сукня вечірня", price: 4599, category: "clothing", img: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=500&q=60" },
             { id: 6, title: "PlayStation 5", price: 19999, category: "games", img: "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=60" },
             { id: 7, title: "God of War Ragnarök", price: 1799, category: "games", img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=500&q=60" },
-            { id: 8, title: "Xbox Controller Elite", price: 5999, category: "games", img: "https://images.unsplash.com/photo-1605635734392-80bac582307c?auto=format&fit=crop&w=500&q=60" },
+            { id: 8, title: "Xbox Controller Elite", price: 5999, category: "games", img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=500&q=60" },
             { id: 9, title: "Набір ароматичних свічок", price: 899, category: "gifts", img: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=500&q=60" },
             { id: 10, title: "Подарунковий бокс преміум", price: 2499, category: "gifts", img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=500&q=60" },
-            { id: 11, title: "Плюшевий ведмідь", price: 1299, category: "gifts", img: "https://images.unsplash.com/photo-1559454403-b8fb87521bc7?auto=format&fit=crop&w=500&q=60" },
+            { id: 11, title: "Плюшевий ведмідь", price: 1299, category: "gifts", img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=500&q=60" },
         ];
 
         let cart = [];
