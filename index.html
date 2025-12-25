@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="style.css">	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет Магазин - Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+<script src="script.js"></script>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                Інтернет Магазин
+            </a>
+            <nav class="nav-links">
+                <a href="#catalog">Каталог</a>
+                <a href="#locations">Наші магазини</a>
+                <a href="#footer">Контакти</a>
+            </nav>
+            <button class="cart-btn" onclick="toggleCart()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.68 9.39a2 2 0 01-1.97 1.61H8.65a2 2 0 01-1.97-1.61L5 6m1-3h20M2 3h4"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                Кошик <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 40px;">
+        
+        <!-- Catalog & Filters -->
+        <section id="catalog">
+            <h2 class="section-title">Каталог товарів</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterProducts('all', this)">Всі товари</button>
+                <button class="filter-btn" onclick="filterProducts('tech', this)">Техніка</button>
+                <button class="filter-btn" onclick="filterProducts('clothing', this)">Одяг</button>
+                <button class="filter-btn" onclick="filterProducts('games', this)">Ігри</button>
+                <button class="filter-btn" onclick="filterProducts('gifts', this)">Подарунки</button>
+            </div>
+
+            <div class="product-grid" id="product-container">
+                <!-- Products will be injected by JS -->
+            </div>
+
+            <!-- Fake Pagination -->
+            <div class="pagination">
+                <div class="page-btn active">1</div>
+                <div class="page-btn">2</div>
+                <div class="page-btn">3</div>
+                <div class="page-btn">→</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Locations Section -->
+    <section id="locations">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Наші магазини</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 40px;">Відвідайте наші магазини у різних містах України</p>
+            
+            <div class="locations-grid">
+                <!-- Kyiv -->
+                <div class="location-card">
+                    <div class="map-placeholder">
+                        <span style="background: white; padding: 5px 10px; border-radius: 4px; position: relative; z-index: 1;">Карта: Київ</span>
+                    </div>
+                    <div class="loc-details">
+                        <h3>Київ</h3>
+                        <div class="loc-info">📍 вул. Хрещатик, 1</div>
+                        <div class="loc-info">📞 +38 (050) 123-45-67</div>
+                        <div class="loc-info">🕒 Пн-Нд: 10:00 - 21:00</div>
+                        <button class="btn-map">Переглянути на карті</button>
+                    </div>
+                </div>
+                <!-- Lviv -->
+                <div class="location-card">
+                    <div class="map-placeholder">
+                        <span style="background: white; padding: 5px 10px; border-radius: 4px; position: relative; z-index: 1;">Карта: Львів</span>
+                    </div>
+                    <div class="loc-details">
+                        <h3>Львів</h3>
+                        <div class="loc-info">📍 проспект Свободи, 12</div>
+                        <div class="loc-info">📞 +38 (050) 123-45-68</div>
+                        <div class="loc-info">🕒 Пн-Нд: 10:00 - 21:00</div>
+                        <button class="btn-map">Переглянути на карті</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Інтернет Магазин</h4>
+                <p style="color: #aaa;">Ваш надійний партнер у світі покупок. Пропонуємо якісні товари за найкращими цінами.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Категорії</h4>
+                <ul>
+                    <li><a href="#">Техніка</a></li>
+                    <li><a href="#">Одяг</a></li>
+                    <li><a href="#">Ігри</a></li>
+                    <li><a href="#">Подарунки</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <ul>
+                    <li>📞 +38 (050) 123-45-67</li>
+                    <li>✉️ info@shop.ua</li>
+                    <li>📍 м. Київ, вул. Хрещатик, 1</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; color: #777;">
+            © 2025 Інтернет Магазин. Всі права захищені.
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h2>Ваш Кошик</h2>
+                <button class="close-modal" onclick="toggleCart()">×</button>
+            </div>
+            
+            <div class="cart-items" id="cart-items-container">
+                <p style="text-align: center; color: var(--gray); margin-top: 20px;">Кошик порожній</p>
+            </div>
+
+            <div class="total-price">
+                Разом: <span id="cart-total">0</span> ₴
+            </div>
+
+            <form class="checkout-form" onsubmit="processOrder(event)">
+                <h3>Оформлення замовлення</h3>
+                <br>
+                <label>Ім'я</label>
+                <input type="text" placeholder="Іван Іванов" required>
+                
+                <label>Телефон</label>
+                <input type="tel" placeholder="+38 (0XX) XXX-XX-XX" required>
+                
+                <label>Номер картки</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                
+                <button type="submit" class="checkout-btn">Оплатити замовлення</button>
+            </form>
+        </div>
+    </div>
+
+  
+</body>
+</html>
